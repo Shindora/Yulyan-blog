@@ -5,8 +5,8 @@ logo: /Yulyan-blog/static/img/avatar.png
 github: https://github.com/Shindora
 about: UIT's Student
 
-baseurl: "https://shindora.github.io/Yulyan-blog/"
-url: "https://shindora.github.io/Yulyan-blog"
+baseurl: "https://shindora.github.io"
+url: "/Yulyan-blog"
 
 allowsearch: true
 
