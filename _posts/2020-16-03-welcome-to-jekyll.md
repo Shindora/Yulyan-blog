@@ -6,22 +6,32 @@ categories: jekyll
 ---
 <h1 style="text-align: justify;"><span style="color: #3366ff; background-color: #ffcc99;"><strong>1-Artificial Neural Networks</strong></span></h1>  
 
-<p><span style="color: #3366ff;"><strong>Nội dung</strong></span></p> 
+#<p><span style="color: #3366ff;"><strong>Nội dung</strong></span></p> 
 1. [Neuron](#0)
 2. [Activation function](#1)
 3. [Neural Network hoạt động như thế nào?](#2)  
-4. [Neural Network hoạt động như thế nào?](#3)
+4. [Neural Network học như thế nào?](#3)
+5. [Gradient Descent](#4)
+6. [Stochastic Gradient Descent (SGD)](#5)
+7. [Backpropagation](#6)
 
-## This is the introduction <a name="0"></a>
+## Neuron <a name="0"></a>
 Some introduction text, formatted in heading 2 style
 
-## Some paragraph <a name="1"></a>
+## Activation function <a name="1"></a>
 The first paragraph text
 
-## Sub paragraph <a name="2"></a>
+## Neural Network hoạt động như thế nào? <a name="2"></a>
 This is a sub paragraph, formatted in heading 3 style
 
-## Sub paragraph <a name="3"></a>  
+## Neural Network học như thế nào? <a name="3"></a>  
+
+## Gradient Descent <a name="4"></a>  
+
+## Stochastic Gradient Descent (SGD) <a name="5"></a>  
+
+## Backpropagation <a name="6"></a>  
+ 
 
 
 [jekyll]:      http://jekyllrb.com
