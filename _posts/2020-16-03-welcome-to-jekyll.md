@@ -20,7 +20,7 @@ Deep Learning đã trở thành một chủ đề nóng trong vài năm trở l�
 
 _(Do là bài viết đầu tiên nên sẽ có sai xót, xin chân thành và cảm ơn những lời đóng góp nhận xét của mọi người.)_  
 
-![immage](https://github.com/Shindora/Yulyan-blog/blob/gh-pages/assets/ann/simpleNN.png "Neural Network được tưởng tượng lại như thế nào?")  
+![Neural Network được tưởng tượng lại như thế nào?](https://github.com/Shindora/Yulyan-blog/blob/gh-pages/assets/ann/simpleNN.png)  
 
 ## 2.Activation function <a name="1"></a>
 The first paragraph text
