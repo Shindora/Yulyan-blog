@@ -6,7 +6,7 @@ categories: jekyll
 ---
 <h1 style="text-align: justify;"><span style="color: #3366ff; background-color: #ffcc99;"><strong>1-Artificial Neural Networks</strong></span></h1>  
 
-<p><span style="text-decoration: underline;"><span style="color: #3366ff;"><strong>Nội dung</strong></span></span></p>  
+#<p><span style="text-decoration: underline;"><span style="color: #3366ff;"><strong>Nội dung</strong></span></span></p>  
 1. [Neuron](#0)  
 2. [Activation function](#1)  
 3. [Neural Network hoạt động như thế nào?](#2)    
