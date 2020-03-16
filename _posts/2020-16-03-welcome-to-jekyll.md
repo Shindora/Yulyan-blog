@@ -21,7 +21,7 @@ _(Do là bài viết đầu tiên nên sẽ có sai xót, xin chân thành và c
 <hr>
 <div class="imgcap">
 <div >
-    <img src="/assets/simpleNN.png" width = "800">
+    <img src="/assets/ANN/simpleNN.png" width = "800">
 </div>
 <div class="thecap">Neural Network được tưởng tượng lại như thế nào?.
 
