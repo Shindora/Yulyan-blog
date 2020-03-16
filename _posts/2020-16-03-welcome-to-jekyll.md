@@ -2,7 +2,7 @@
 layout: post
 title:  "Artificial Neural Networks"
 date:   2020-03-16 21:00:00
-categories: jekyll
+categories: ANN
 ---
 <h1 style="text-align: justify;"><span style="color: #3366ff; background-color: #ffcc99;"><strong>1-Artificial Neural Networks</strong></span></h1>  
 
