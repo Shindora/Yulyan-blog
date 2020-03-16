@@ -19,11 +19,7 @@ categories: jekyll
 Deep Learning đã trở thành một chủ đề nóng trong vài năm trở lại đây, nó là lĩnh vực được ngày càng nhiều sinh viên Việt Nam tìm hiểu và nghiên cứu. Vậy có gì đặc biệt và khác gì với Machine Learning? Chúng ta hãy tìm hiều trong bài viết này..
 _(Do là bài viết đầu tiên nên sẽ có sai xót, xin chân thành và cảm ơn những lời đóng góp nhận xét của mọi người.)_  
 
-<hr>
-<div >
-    <img src="/assets/ANN/simpleNN.png" width = "800">
-</div>
-<div class="thecap">Neural Network được tưởng tượng lại như thế nào?.
+![alt text](https://github.com/Shindora/Yulyan-blog/blob/gh-pages/assets/ann/simpleNN.png "Neural Network được tưởng tượng lại như thế nào?")
 
 
 
