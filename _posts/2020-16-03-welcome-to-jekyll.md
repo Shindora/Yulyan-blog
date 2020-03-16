@@ -16,11 +16,11 @@ categories: jekyll
 7. [Backpropagation](#6)
 
 ## 1.Neuron <a name="0"></a>
-Deep Learning đã trở thành một chủ đề nóng trong vài năm trở lại đây, nó là lĩnh vực được ngày càng nhiều sinh viên Việt Nam tìm hiểu và nghiên cứu. Vậy có gì đặc biệt và khác gì với Machine Learning? Chúng ta hãy tìm hiều trong bài viết này..
+Deep Learning đã trở thành một chủ đề nóng trong vài năm trở lại đây, nó là lĩnh vực được ngày càng nhiều sinh viên Việt Nam tìm hiểu và nghiên cứu. Vậy có gì đặc biệt và khác gì với Machine Learning? Chúng ta hãy tìm hiều trong bài viết này..  
+
 _(Do là bài viết đầu tiên nên sẽ có sai xót, xin chân thành và cảm ơn những lời đóng góp nhận xét của mọi người.)_  
 
-<img src="/assets/ann/simpleNN.png" alt="Neural Network được tưởng tượng lại như thế nào?" style="width:300px;height:400px;">  
-
+![immage](https://github.com/Shindora/Yulyan-blog/blob/gh-pages/assets/ann/simpleNN.png "Neural Network được tưởng tượng lại như thế nào?")  
 
 ## 2.Activation function <a name="1"></a>
 The first paragraph text
