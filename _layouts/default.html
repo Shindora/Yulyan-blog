@@ -6,6 +6,15 @@
       <script type="text/javascript">window.baseurl = '{{ site.url }}';</script>
       {% include css.html %}
   </head>
+<!-- -- Import latext  -->
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+	skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+	inlineMath: [['$','$']]
+  }
+});
+</script>
 
   <body class="home overflow-hidden">
     {% include header.html %}
