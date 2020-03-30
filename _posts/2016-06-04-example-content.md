@@ -1,124 +1,40 @@
 ---
 layout: post
-title: Example content for posts  
-categories: others
+title: Recurrent Neural Network (RNN) 
+categories: RNN
 ---
+<h1 style="text-align: justify;"><span style="color: #3366ff; background-color: #ffcc99;"><strong>2 - Recurrent Neural Network (RNN)</strong></span></h1>  
+
+# NỘI DUNG
+1. [Ý tưởng đằng sau RNN](#1)
+2. [Ứng dụng của RNN](#2)
+3. [Vấn đề Vanishing Gradient ](#3)  
+4. [Long Short-Term Memory (LSTM)](#4)
+5. [Các biến thể của LSTM](#5)
 
 
-<p><small>This demo page has been used from <a href="http://jasonm23.github.io/markdown-css-themes/" target="_blank">http://jasonm23.github.io/markdown-css-themes/</a>.</small></p>
-
-<h1>A First Level Header</h1>
-
-<h2>A Second Level Header</h2>
-
-<h3>A Third Level Header</h3>
-
-<h4>A Fourth Level Header</h4>
-
-<h5>A Fifth Level Header</h5>
-
-<h6>A Sixed Level Header</h6>
-
-<p>Now is the time for all good men to come to
-the aid of their country. This is just a
-regular paragraph.</p>
-
-<p>The quick brown fox jumped over the lazy
-dog&rsquo;s back.</p>
-
-<hr />
-
-<h3>Header 3</h3>
-
-<blockquote><p>This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,
-consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.
-Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</p>
-
-<p>Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse
-id sem consectetuer libero luctus adipiscing.</p>
-
-<h2>This is an H2 in a blockquote</h2>
-
-<p>This is the first level of quoting.</p>
-
-<blockquote><p>This is nested blockquote.</p></blockquote>
-
-<p>Back to the first level.</p></blockquote>
-
-<p>Some of these words <em>are emphasized</em>.
-Some of these words <em>are emphasized also</em>.</p>
-
-<p>Use two asterisks for <strong>strong emphasis</strong>.
-Or, if you prefer, <strong>use two underscores instead</strong>.</p>
-
-<ul>
-<li>Candy.</li>
-<li>Gum.</li>
-<li>Booze.</li>
-<li>Red</li>
-<li>Green</li>
-<li><p>Blue</p></li>
-<li><p>A list item.</p></li>
-</ul>
-
-
-<p>With multiple paragraphs.</p>
-
-<ul>
-<li><p>Another item in the list.</p></li>
-<li><p>This is a list item with two paragraphs. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit. Aliquam hendrerit
-mi posuere lectus.</p></li>
-</ul>
-
-
-<p>Vestibulum enim wisi, viverra nec, fringilla in, laoreet
-vitae, risus. Donec sit amet nisl. Aliquam semper ipsum
-sit amet velit.*   Suspendisse id sem consectetuer libero luctus adipiscing.</p>
-
-<ul>
-<li>This is a list item with two paragraphs.</li>
-</ul>
-
-
-<p>This is the second paragraph in the list item. You&rsquo;re
-only required to indent the first line. Lorem ipsum dolor
-sit amet, consectetuer adipiscing elit.</p>
-
-<ul>
-<li><p>Another item in the same list.</p></li>
-<li><p>A list item with a bit of <code>code</code> inline.</p></li>
-<li><p>A list item with a blockquote:</p>
-
-<blockquote><p>This is a blockquote
-inside a list item.</p></blockquote></li>
-</ul>
-
-
-<p>Here is an example of a pre code block</p>
-
-<pre><code>tell application "Foo"
-    beep
-end tell
-</code></pre>
-
-<p>This is an <a href="#">example link</a>.</p>
-
-<p>I start my morning with a cup of coffee and
-<a href="http://www.nytimes.com/">The New York Times</a>.</p>
-
-### Code snippet
-
-{% highlight python %}
-if __name__ =='__main__':
-    img_thread = threading.Thread(target=downloadWallpaper)
-    img_thread.start()
-    st = '\rDownloading Image'
-    current = 1
-    while img_thread.is_alive():
-        sys.stdout.write(st+'.'*((current)%5))
-        current=current+1
-        time.sleep(0.3)
-    img_thread.join()
-    print('\nImage of the day downloaded.')
-{% endhighlight %}
+## 1.Ý tưởng đằng sau RNN <a name="1"></a>  
+### 1.1. Neural network và não bộ con người
+ Như chúng ta đã biết thì các lý thuyết cơ sở của Deep Learning được hình và phát triển dựa trên sự bắt chước theo mô hình của não bộ con người.<br>
+ Não người gồm có 3 phần bao gồm: đại não ([cerebrum](https://en.wikipedia.org/wiki/Cerebrum)), là hình ảnh phía dưới, tiểu não ([cerebellum](https://en.wikipedia.org/wiki/Cerebellum)) và trụ não ([brainstem](https://en.wikipedia.org/wiki/Brainstem)), được liên kết với tủy.
+ ![](https://upload.wikimedia.org/wikipedia/vi/e/e1/Nao_nguoi.jpg)
+ _Nguồn: [Wiki](https://vi.wikipedia.org/wiki/N%C3%A3o_ng%C6%B0%E1%BB%9Di)_<br>
+ ### 1.2. Liên hệ giữa thùy trán và RNN<br>
+   RNNs hoạt động giống như trí nhớ tạm thời vậy, chúng ta sẽ học được những hiện tượng qua một vài lần bắt gặp mà sử dụng nó vào những việc sau này.<br>
+   Đối với con người, trí nhớ ngắn hạn là một trong những chức năng của thùy trán.
+ <br>
+ ### 1.3. Biểu diễn mô hình RNN
+  Ta bắt đầu chuyển đổi một mô hình ANN sang RNN <br>
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/1.png)
+  1. Nén lại. Các lớp vẫn nguyên, ta hãy tưởng tượng đang quan sát mô hình từ phía dưới
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/2.png)
+  2. Giản lượt bớt các mũi tên
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/3.png)
+  3. Xoay theo chiều thẳng đứng theo đúng mô hình chuẩn
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/4.png)
+  4. Thêm vào vòng lặp (temporal loop), hidden layer không chỉ đưa ra output mà còn phản hồi lại chính nó (đây là cách biểu diễn cũ).
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/5.png)
+  5. Bỏ kiếm soát vòng lặp và biểu diễn RNN theo cách mới. Bây giờ, mỗi vòng tròn không chỉ là một neuron mà còn là một lớp neuron
+  ![](https://raw.githubusercontent.com/Shindora/Yulyan-blog/gh-pages/assets/rnn/6.png)
+ 
+  
